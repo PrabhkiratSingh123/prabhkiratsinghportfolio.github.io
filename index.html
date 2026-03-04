@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Prabhkirat Singh - Computer Science & Engineering Student | Python | Java | Data Science | Web Development">
+    <meta name="theme-color" content="#0f0f23">
+    <title>Prabhkirat Singh - Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="background-canvas"></canvas>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Prabhkirat Singh</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-wrapper">
+
+            <!-- LEFT: Profile Image -->
+            <div class="hero-image">
+                <img src="assets/profile.jpg" alt="Prabhkirat Singh">
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Prabhkirat Singh</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    CSE Student | Python | Java | Data Science | Web Developer
+                </p>
+
+                <div class="typing-container">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor"></span>
+                </div>
+
+                <!-- Buttons + Social Icons -->
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Get In Touch
+                    </a>
+
+                    <div class="social-links">
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/prabhkiratsingh123" target="_blank" rel="noopener noreferrer"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 
+                            8.205 11.385.6.105.825-.255.825-.57 
+                            0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41
+                            -.135-.345-.72-1.41-1.23-1.695
+                            -.42-.225-1.02-.78-.015-.795.945-.015 
+                            1.62.87 1.845 1.23 1.08 1.815 
+                            2.805 1.305 3.495.99.105-.78.42-1.305 
+                            .765-1.605-2.67-.3-5.46-1.335-5.46-5.925 
+                            0-1.305.465-2.385 1.23-3.225
+                            -.12-.3-.54-1.53.12-3.18 
+                            0 0 1.005-.315 3.3 1.23.96-.27 
+                            1.98-.405 3-.405s2.04.135 
+                            3 .405c2.295-1.56 3.3-1.23 
+                            3.3-1.23.66 1.65.24 2.88.12 
+                            3.18.765.84 1.23 1.905 1.23 3.225 
+                            0 4.605-2.805 5.625-5.475 5.925.435.375 
+                            .81 1.095.81 2.22 0 1.605-.015 
+                            2.895-.015 3.3 0 .315.225.69 
+                            .825.57A12.001 12.001 0 0024 
+                            12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/prabhkiratsingh123" target="_blank" rel="noopener noreferrer"
+                            class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569
+                            c0-1.328-.475-2.236-1.986-2.236
+                            -1.081 0-1.722.731-2.004 1.438
+                            -.103.25-.129.599-.129.948v5.419h-3.554
+                            s.05-8.736 0-9.646h3.554v1.364
+                            c.43-.664 1.196-1.608 2.906-1.608
+                            2.121 0 3.713 1.387 3.713 
+                            4.365v5.525zM5.337 8.855
+                            c-1.144 0-1.915-.758-1.915-1.704
+                            0-.951.77-1.704 1.968-1.704
+                            1.197 0 1.915.75 1.948 
+                            1.704 0 .946-.751 
+                            1.704-1.968 1.704zm1.529 
+                            11.597H3.808V9.856h3.058v10.596z" />
+                            </svg>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:sprabhkirat43@gmail.com" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7
+                                a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a Computer Science and Engineering student at Lovely Professional University
+                        (CGPA: 8.07) with a strong passion for software development, data science, and
+                        building impactful digital solutions. I thrive on solving complex problems and
+                        bringing ideas to life through clean, efficient code.
+                    </p>
+
+                    <p>
+                        My technical interests span full-stack web development, data analysis, and
+                        intelligent automation. I have hands-on experience with Python, Java, JavaScript,
+                        and tools like MySQL, Power BI, and Jupyter Notebook. I focus on creating
+                        applications that are not just functional but also intuitive and user-friendly.
+                    </p>
+
+                    <p>
+                        Beyond academics, I actively pursue certifications and challenges that sharpen
+                        my skills. From completing IBM's Data Science certifications to earning a
+                        Silver Elite from NPTEL (IIT Kharagpur) among 53,000+ participants,
+                        I am committed to continuous learning and growth.
+                    </p>
+
+                    <p>
+                        I am a strong believer in teamwork and adaptability. Whether collaborating on
+                        group projects or tackling individual challenges, I bring analytical thinking
+                        and a problem-solving mindset to every task.
+                    </p>
+
+                    <p>
+                        I aim to grow as a developer and data professional who builds meaningful,
+                        real-world solutions — combining innovation, clarity, and precision
+                        in every project I undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+
+            <div class="skills-modern-grid">
+
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span>C++</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>R</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Frameworks &amp; Web</h3>
+                    <div class="skill-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span>MySQL</span>
+                        <span>Excel</span>
+                        <span>Power BI</span>
+                        <span>Jupyter Notebook</span>
+                        <span>VS Code</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span>Analytical Thinking</span>
+                        <span>Problem Solving</span>
+                        <span>Team Collaboration</span>
+                        <span>Adaptability</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1: ATM Simulator -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/atm-simulator.jpg" alt="ATM Simulator">
+                    </div>
+                    <div class="project-content">
+                        <h3>ATM Simulator</h3>
+                        <p>A full-stack ATM Simulator web application with secure user authentication, balance
+                            inquiry, cash withdrawal, deposit, and transaction history. Delivers 99% transaction
+                            accuracy.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://github.com/PrabhkiratSingh123/ATM-SIMULATOR" target="_blank"
+                                class="btn btn-small btn-outline">GitHub</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Climate View -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/climate-view.jpg" alt="Climate View">
+                    </div>
+                    <div class="project-content">
+                        <h3>Climate View</h3>
+                        <p>Real-time climate intelligence dashboard with live weather data, AQI monitoring,
+                            hourly &amp; weekly forecasting, and intelligent coaching for informed decision-making.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">OpenWeatherMap API</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://github.com/PrabhkiratSingh123/climate-compass" target="_blank"
+                                class="btn btn-small btn-outline">GitHub</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: StockPluse -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/stock-pulse.jpg" alt="StockPluse">
+                    </div>
+                    <div class="project-content">
+                        <h3>StockPluse</h3>
+                        <p>A comprehensive Stock Market Analysis Platform delivering real-time data, technical
+                            indicators
+                            (SMA, EMA, RSI, MACD), and interactive charts to empower traders and beginners alike.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">yfinance</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://github.com/PrabhkiratSingh123/StockPluse-Stock_market_analysis_platform-"
+                                target="_blank" class="btn btn-small btn-outline">GitHub</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Retail Sales & Feedback Dashboard -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/retail-dashboard.jpg" alt="Retail Sales & Feedback Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Retail Sales &amp; Feedback Dashboard</h3>
+                        <p>End-to-end Power BI dashboard on 300K+ records featuring a star schema, advanced DAX KPIs
+                            (MoM, YoY, AOV), and 4 analytical pages covering sales, customers, products &amp; logistics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Power Query</span>
+                            <span class="tag">Star Schema</span>
+                            <span class="tag">Data Modeling</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7404207648197218304/"
+                                target="_blank" class="btn btn-small btn-outline">LinkedIn</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Wine Quality Prediction -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/wine-quality.jpg" alt="Wine Quality Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3>Wine Quality Prediction</h3>
+                        <p>End-to-end ML project predicting White &amp; Red wine quality (Low / Medium / High) using 5
+                            ensemble models — CatBoost delivered the highest accuracy on both wine types.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CatBoost</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">LightGBM</span>
+                            <span class="tag">Scikit-learn</span>
+                        </div>
+                        <div class="project-links" style="display:flex;gap:10px;margin-top:12px;">
+                            <a href="https://github.com/PrabhkiratSingh123/Wine-Quality-Prediction-ML" target="_blank"
+                                class="btn btn-small btn-outline">GitHub</a>
+                            <button class="btn btn-small btn-outline project-btn" data-project="5">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Certifications &amp; Achievements</h2>
+
+            <div class="certifications-grid">
+
+                <a href="https://www.coursera.org/account/accomplishments/verify/7UWTO6P91T2X" target="_blank"
+                    class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">🐍</div>
+                    <h3>Python for Data Science, AI &amp; Development</h3>
+                    <p>IBM</p>
+                    <span class="cert-year">Aug 2025</span>
+                </a>
+
+                <a href="https://www.coursera.org/account/accomplishments/verify/GKWSI4XKEXPO" target="_blank"
+                    class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">🗄️</div>
+                    <h3>Databases and SQL for Data Science with Python</h3>
+                    <p>IBM</p>
+                    <span class="cert-year">Aug 2025</span>
+                </a>
+
+                <a href="https://www.coursera.org/account/accomplishments/verify/ZXGVEHF46B1U" target="_blank"
+                    class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">📊</div>
+                    <h3>Data Modeling in Power BI</h3>
+                    <p>Microsoft</p>
+                    <span class="cert-year">Dec 2025</span>
+                </a>
+
+                <a href="https://www.linkedin.com/posts/prabhkiratsingh123_iot-nptel-elitecertificate-activity-7398339268894552064-MXmG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfmTF8B_Vu9pQQ-Ku2UjdyqqKo-AoXitLs"
+                    target="_blank" class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">🏅</div>
+                    <h3>Silver Elite – Introduction to IoT</h3>
+                    <p>NPTEL – IIT Kharagpur</p>
+                    <span class="cert-year">Nov 2025</span>
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/prabhkiratsingh123/details/certifications/1758610037096/single-media-viewer/?profileId=ACoAAEfmTF8B_Vu9pQQ-Ku2UjdyqqKo-AoXitLs"
+                    target="_blank" class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">🎯</div>
+                    <h3>DSA Summer Bootcamp – CodeQuest</h3>
+                    <p>Data Structures &amp; Algorithms</p>
+                    <span class="cert-year">Jun–Jul 2025</span>
+                </a>
+
+
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7386286683476025344/" target="_blank"
+                    class="cert-card">
+                    <div class="cert-overlay">View Certificate →</div>
+                    <div class="cert-icon">🤖</div>
+                    <h3>IBM Data Analysis with Python Badge</h3>
+                    <p>IBM</p>
+                    <span class="cert-year">Oct 2025</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate-on-scroll">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="contact-subtitle">I'm always interested in hearing about new projects and opportunities.</p>
+
+            <div class="contact-content">
+                <div class="contact-card">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:sprabhkirat43@gmail.com">sprabhkirat43@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <h3>💼 LinkedIn</h3>
+                    <a href="https://linkedin.com/in/prabhkiratsingh123"
+                        target="_blank">linkedin.com/in/prabhkirat</a>
+                </div>
+                <div class="contact-card">
+                    <h3>🐙 GitHub</h3>
+                    <a href="https://github.com/prabhkiratsingh123" target="_blank">github.com/prabhkiratsingh</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Copyright of Prabhkirat Singh</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
