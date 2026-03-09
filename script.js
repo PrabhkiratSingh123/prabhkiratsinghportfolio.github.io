@@ -18,7 +18,7 @@ if (savedTheme === 'light') {
 
 themeToggle.addEventListener('click', () => {
     rootElement.classList.toggle('light-mode');
-    
+
     if (rootElement.classList.contains('light-mode')) {
         localStorage.setItem('theme', 'light');
         moonIcon.style.display = 'block';
@@ -356,3 +356,24 @@ window.addEventListener("resize", () => {
     resizeCanvas();
     initParticles();
 });
+
+// ========== Resume Tabs Logic ==========
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+
+        // Remove active class from all buttons and content
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        // Reveal the target content
+        const targetTab = document.getElementById(tabId);
+        if (targetTab) {
+            targetTab.classList.add('active');
+        }
+    });
+});
+
